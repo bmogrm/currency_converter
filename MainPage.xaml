@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="currency_converter.MainPage">
+
+    <Grid Margin="20" HeightRequest="300">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Label Text="Конвертер валют"
+               TextTransform="Uppercase"
+               FontSize="25"
+               HorizontalOptions="Center"
+               Grid.ColumnSpan="3"
+               Grid.Row="0"/>
+        <Label Text="Выберите дату:"
+               Grid.Row="1"
+               HorizontalOptions="End"
+               VerticalOptions="Center"/>
+        <DatePicker Grid.Row="1"
+                    Grid.Column="2"
+                    HorizontalOptions="Start"/>
+        <Picker Grid.Column="0"
+                Grid.Row="2"
+                Background="Red"/>
+        <Entry Grid.Column="2"
+               Grid.Row="2"/>
+        <Picker Grid.Column="0"
+                Margin="0,20,0,0"
+                Grid.Row="3"
+                Background="Red"/>
+        <Label Grid.Column="2"
+               Margin="0,20,0,0"
+               Grid.Row="3"
+               Text="Ваша цена"/>
+    </Grid>
+
+</ContentPage>
