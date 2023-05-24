@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="currency_converter.MainPage">
+             x:Class="currency_converter.MainPage"
+             xmlns:viewModel="clr-namespace:currency_converter.ViewModel"
+             x:DataType="{x:Type viewModel:ViewModel}">
 
     <Grid Margin="20" HeightRequest="300">
         <Grid.ColumnDefinitions>
@@ -16,6 +18,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Label Text="Конвертер валют"
+               FontAttributes="Bold"
                TextTransform="Uppercase"
                FontSize="25"
                HorizontalOptions="Center"
@@ -25,18 +28,18 @@
                Grid.Row="1"
                HorizontalOptions="End"
                VerticalOptions="Center"/>
-        <DatePicker Grid.Row="1"
+        <DatePicker x:Name="datePic" Grid.Row="1"
                     Grid.Column="2"
-                    HorizontalOptions="Start"/>
+                    HorizontalOptions="Start"
+                    Date="{Binding Update}"/>
         <Picker Grid.Column="0"
                 Grid.Row="2"
-                Background="Red"/>
+                ItemsSource="{Binding ValuteList}"/>
         <Entry Grid.Column="2"
                Grid.Row="2"/>
         <Picker Grid.Column="0"
                 Margin="0,20,0,0"
-                Grid.Row="3"
-                Background="Red"/>
+                Grid.Row="3"/>
         <Label Grid.Column="2"
                Margin="0,20,0,0"
                Grid.Row="3"

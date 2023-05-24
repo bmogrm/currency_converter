@@ -7,6 +7,9 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
+        ViewModel.ViewModel viewModel = new ViewModel.ViewModel();
+		viewModel.Update = DateTime.Today;
+        BindingContext = viewModel;
 	}
 
 }
