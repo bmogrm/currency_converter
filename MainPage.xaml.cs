@@ -8,7 +8,7 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
         ViewModel.ViewModel viewModel = new ViewModel.ViewModel();
-		viewModel.Update = DateTime.Today;
+		viewModel.Select_date = DateTime.Today;
         BindingContext = viewModel;
 	}
 
